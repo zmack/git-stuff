@@ -61,5 +61,6 @@
   * Recovering dead commits
     * git reflog
   
+* Fixing stuff
   * git bisect
     * https://gist.github.com/c1b16376a8b10f94b4a2
