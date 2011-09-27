@@ -1,0 +1,65 @@
+* Git, what it does, who uses it
+* Distributed
+* What's a remote
+* What's a commit
+
+* Basics
+  * A local repository
+    * git init .
+  * .gitignore
+  * global ignores
+  * Adding stuff to the index
+    * git add <whatever>
+  * Committing your changes
+    * git commit -m "whatever"
+  * Done!
+  * git commit --amend
+    * don't do this on published branches
+  * removing a commit
+  
+* Branches
+  * git checkout -b <new_branch>
+    * you can switch between them at any time
+  * merging stuff from branches
+    * git merge commit
+  * rebasing
+    * git rebase commit
+    * git rebase --continue
+    * git rebase --skip
+    * git rebase --interactive
+      * don't do this on published branches
+    * switch between branches with git stash
+      * git stash
+      * git stash show --patch
+      * git stash apply
+      * git stash pop
+  * cherry-picking
+    * single commits
+    * git cherry-pick 
+
+* Working with other people
+  * What's a remote
+    * git remote
+  * Adding a remote
+    * git remote add
+  * Fetching / pushing we don't really care
+    * git push master origin
+    * usually git push
+  * Getting changes from people
+    * git fetch
+      * gets all the changes you want from the remote repos, sticks them into refs/remotes/<remote>/<branch>
+    * git merge
+      * getting everything from one branch, stick it next to another, make a merge commit
+    * git rebase
+      * sticking one branch on top of another
+      * git rebase --onto ( <_> ) # maybe not
+    * git pull
+      * does a fetch and a merge ( by default ) or a rebase
+    * git pull --rebase
+      * it's ok to do it if your changes are unpublished
+      * it's bad to do it if your changes are published
+  * Recovering dead commits
+    * git reflog
+  
+  * git bisect
+    * https://gist.github.com/c1b16376a8b10f94b4a2
